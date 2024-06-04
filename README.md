@@ -20,8 +20,8 @@ First thing we notice is an overwhelming amount of NaN values.  We use imputatio
 * Google  
 * Android  
 
-![Word frequency](images/word_freq.png)
-![Sentiment of brand reformatted](images/sentiment_brand.png)
+![Word frequency](Images/word_freq.png)
+![Sentiment of brand reformatted](Images/sentiment_brand.png)
 
 Before we can really do any analysis or modelling, the data must be preprocessed.  We use the following steps in this notebook:
 
@@ -36,10 +36,10 @@ Next step is to use LabelEncoder for our categorical variable **'sentiment'**.  
 * Negative = 1
 * Nuetral = 2
 * Positive = 3  
-![Sentiment of each brand](images/brand_sentiment.png)
+![Sentiment of each brand](Images/brand_sentiment.png)
 
 Then **OneHotEncoding** is used for all of the brands mentioned above.  Now we can focus on the tweets again.  We will tokenize the tweets so that we can then vectorize them, creating a bag of words for our corpus.  These 2 steps will allow us to view frequency of words in our corpus, create TF-IDF Histograms, and view bigrams and trigrams.  
-![Top 50 Bigrams](images/most_common_bigrams.png)
+![Top 50 Bigrams](Images/most_common_bigrams.png)
 Another important step is to perform Part of Speech tagging.  POS tagging is important to understand grammar and context of words and also helps improve modelling.
 
 ## Modelling
@@ -57,7 +57,7 @@ Each model will be improved upon using GridSearchCV which will find the best par
 
 ## Recomendation
 based on our models and analysis, it is clear that all things Apple were the most popular at this years SXSW conference.  Apple occured so much more frequently throughout our tweets that we were even able to break down the brand into 2 of the most popular items from that brand (iPhone, iPad).  We can also tell that iPad 2 is so commonly occuring in this dataset, that this conference was in 2011.
-![Top 50 Bigrams](images/most_common_bigrams.png)
+![Top 50 Bigrams](Images/most_common_bigrams.png)
 From a business perspective, I would encourage event organizers to give more allownaces and resources to Apple as they are clearly a main draw to this conference.  The next most popular brand would be Google.  Noted by rollout of the chromebook.
 
 
