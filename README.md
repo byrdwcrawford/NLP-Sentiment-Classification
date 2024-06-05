@@ -53,10 +53,35 @@ Now that our data is cleaned and preprocessed for modelling, we begin to build t
 
 Each model will be improved upon using GridSearchCV which will find the best parameters for us.  We will then take the best models and use **Stacking and Voting Ensemble methods** to create even better models.
 
+Ensemble methods in ML is the process of combining multiple models to create one model that should outperform all others.  This works, because the Ensemble method is able to utilize the strengths of the models and is able to sort out the weaknesses of each individual model.  
+
+In this notebook, we utilized 2 Ensemble Methods-Stacking and Voting.  Here's a brief synopsis of how these work:  
+    
+Stacking-Multiple models called base learners are trained on the dataset and then the predictions of these models are the input features of a secondary model referred to as a meta-learner.  
+  
+Voting-the models are all trained independently and then combined via voting.  There are two types of voting-hard voting and soft voting.  In hard voting, the final prediction is determined bu majority vote.  In soft voting, each model provides the probability estimate for each class and the final prediction is made by averaging these probabilities.
+
 ## Conclusion
 
+Here is what we can determine from our results:
+  
+* Our model can predict the correct class of tweet(negative, nuetral, positive) with 69% accuracy.  This is actually fairly accurate as there are 3 classes, so a model that was purely guessing would be accurate roughly 33% of the time.  
+* Class 1  
+  * **Precision**- Our model predicts tweets fall into class 1 61% of the time.
+  * **Recall**- The instances where the actual value of a tweet is class 1 were correctly identified 20% of the time
+  * **F1-score**- Low F1-score is due to the sample size
+* Class 2
+  * **Precision**- Our model predicts tweets fall into class 2 69% of the time.
+  * **Recall**- The instances where the actual value of a tweet is class 2 were correctly identified 85% of the time
+  * **F1-score**- High F1-score is due to the sample size
+* Class 3
+  * **Precision**- Our model predicts tweets fall into class 3 68% of the time.
+  * **Recall**- The instances where the actual value of a tweet is class 3 were correctly identified 53% of the time
+  * **F1-score**- Moderate F1-score is due to the sample size
+
 ## Recomendation
-based on our models and analysis, it is clear that all things Apple were the most popular at this years SXSW conference.  Apple occured so much more frequently throughout our tweets that we were even able to break down the brand into 2 of the most popular items from that brand (iPhone, iPad).  We can also tell that iPad 2 is so commonly occuring in this dataset, that this conference was in 2011.
+![Feature Importances](Images/dt_feature_names.png)
+Based on our models and analysis, it is clear that all things Apple were the most popular at this years SXSW conference.  Apple occured so much more frequently throughout our tweets that we were even able to break down the brand into 2 of the most popular items from that brand (iPhone, iPad).  We can also tell that iPad 2 is so commonly occuring in this dataset, that this conference was in 2011.
 ![Top 50 Bigrams](Images/most_common_bigrams.png)
 From a business perspective, I would encourage event organizers to give more allownaces and resources to Apple as they are clearly a main draw to this conference.  The next most popular brand would be Google.  Noted by rollout of the chromebook.
 
