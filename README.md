@@ -34,7 +34,7 @@ Before we can really do any analysis or modelling, the data must be preprocessed
 Next step is to use LabelEncoder for our categorical variable **'sentiment'**.  The rows where sentiment was unknown have been dropped since all NaN values will need to be removed prior to modelling.  We can take advantage of the ordinal nature of this column making:  
 
 * Negative = 1
-* Nuetral = 2
+* Neutral = 2
 * Positive = 3  
 ![Sentiment of each brand](Images/brand_sentiment.png)
 
