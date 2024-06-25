@@ -79,13 +79,43 @@ Here is what we can determine from our results:
   * **Recall**- The instances where the actual value of a tweet is class 3 were correctly identified 53% of the time
   * **F1-score**- Moderate F1-score is due to the sample size
 
-## Recomendation
+## Recommendation
 ![Feature Importances](Images/dt_feature_names.png)
 Based on our models and analysis, it is clear that all things Apple were the most popular at this years SXSW conference.  Apple occured so much more frequently throughout our tweets that we were even able to break down the brand into 2 of the most popular items from that brand (iPhone, iPad).  We can also tell that iPad 2 is so commonly occuring in this dataset, that this conference was in 2011.
 ![Top 50 Bigrams](Images/most_common_bigrams.png)
-From a business perspective, I would encourage event organizers to give more allownaces and resources to Apple as they are clearly a main draw to this conference.  The next most popular brand would be Google.  Noted by rollout of the chromebook.
+From a business perspective, I would encourage event organizers to give more allowances and resources to Apple as they are clearly a main draw to this conference.  The next most popular brand would be Google.  Noted by rollout of the chromebook.  In summation:  
 
+* Allocate more resources to Apple and Google
+* Provide more promotional material for Apple and Google
+* Move Android booth to low traffic area
+  
 
+- Repository/
+  - images/
+    - TFIDF_most_common_words.png
+    - brand_sentiment.png
+    - decision_tree.png
+    - dt_feature_names.png
+    - gb_matrix.png
+    - log_matrix.png
+    - most_common_bigrams.png
+    - most_common_triigrams.png
+    - sentiment_brand.png
+    - word_freq.png
+  - Notebooks/
+    - Generalizing Models.ipynb
+    - NLP Notebook-ColumnTransformer-SMOTE.ipynb
+    - NLP Notebook-Copy1.ipynb
+    - NLP Notebook.ipynb
+  - PDF's/
+    - byrdwcrawford_NLP-Sentiment-Classification.pdf
+    - NLP Notebook-ColumnTransformer - Jupyter Notebook.pdf
+    - Tweet NLP Analysis.pdf
+    - .gitignore
+  - .gitignore.md
+  - NLP Notebook-ColumnTransformer.ipynb
+  - Readme.md
+  - tweets.csv
 
 
 
